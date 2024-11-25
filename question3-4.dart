@@ -15,5 +15,5 @@ void main() {
   double width = double.tryParse(widthInput ?? '') ?? 1;   // ใช้ค่าเริ่มต้น 1 หากผู้ใช้ไม่กรอก
 
   double area = calculateArea(length: length, width: width);
-  print('The area of the rectangle is: $area');
+  print('พื้นที่ของสี่เหลี่ยมผืนผ้า: $area');
 }
