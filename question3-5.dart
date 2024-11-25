@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:io';
 
 String generateRandomPassword(int length) {
   const String chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&*()';
@@ -8,6 +9,13 @@ String generateRandomPassword(int length) {
 }
 
 void main() {
-  print('Random Password: ${generateRandomPassword(5)}'); // สร้างรหัสผ่าน 5 ตัว
+  print('Enter the desired password length:');
+  String? input = stdin.readLineSync();
+  
+  if (input != null && int.tryParse(input) != null) {
+    int length = int.parse(input);
+    print('Random Password: ${generateRandomPassword(length)}');
+  } else {
+    print('Invalid input! Please enter a valid number.');
+  }
 }
-
