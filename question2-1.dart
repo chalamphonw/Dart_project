@@ -3,7 +3,6 @@ void main() {
   // รับค่าตัวเลขจากผู้ใช้
   print('กรุณากรอกเลข:');
   int? number = int.tryParse(stdin.readLineSync()!);
- 
   if (number == null) {
     print('กรุณากรอกตัวเลขที่ถูกต้อง');
   } else {
