@@ -14,8 +14,6 @@ void main() {
   
   if (input != null && int.tryParse(input) != null) {
     int length = int.parse(input);
-    print('Random Password: ${generateRandomPassword(length)}');
-  } else {
-    print('Invalid input! Please enter a valid number.');
-  }
+    print('รหัสที่ได้คือ: ${generateRandomPassword(length)}');
+  } 
 }
