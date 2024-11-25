@@ -16,6 +16,5 @@ void main () {
   print('ยอดที่แต่ละคนต้องจ่ายคือ: ฿$amountPerPerson');
 
 }
-git add .
-git commit -m "65311132"
-git push
+
+
