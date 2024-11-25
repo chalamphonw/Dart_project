@@ -5,20 +5,18 @@ void createUser(String name, int age, {bool isActive = true}) {
 }
 
 void main() {
-  print('Enter name:');
+  print('ชื่อ:');
   String? name = stdin.readLineSync();
 
-  print('Enter age:');
+  print('อายุ:');
   String? ageInput = stdin.readLineSync();
   int age = int.tryParse(ageInput ?? '') ?? 0; // ใช้ค่าเริ่มต้น 0 หากผู้ใช้ไม่กรอกหรือกรอกค่าที่ไม่ถูกต้อง
 
-  print('Is the user active? (yes/no):');
+  print('ใช้งานอยู่รึป่าว (yes/no):');
   String? isActiveInput = stdin.readLineSync()?.toLowerCase();
   bool isActive = isActiveInput == 'yes' || isActiveInput == 'y';
 
   if (name != null && name.isNotEmpty && age > 0) {
     createUser(name, age, isActive: isActive);
-  } else {
-    print('Invalid input. Please enter valid name and age.');
-  }
+    }
 }

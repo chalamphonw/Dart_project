@@ -9,7 +9,7 @@ String generateRandomPassword(int length) {
 }
 
 void main() {
-  print('Enter the desired password length:');
+  print('ใส่ความยาวของรหัส');
   String? input = stdin.readLineSync();
   
   if (input != null && int.tryParse(input) != null) {
