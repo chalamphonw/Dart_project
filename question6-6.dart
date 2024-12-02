@@ -1,15 +1,32 @@
 abstract class Bottle {
-  open();
-
-}
-
-class CokeBottle implements Bottle {
-  @override
-  open( ) {
-    print("Coke bottle is opened.");
+  void open();
+ 
+  factory Bottle(String brand) {
+    if(brand == 'Pepsi'){
+      return PepsiBottle();
+    }else{
+      return CokeBottle();
+  }
   }
 }
+ 
+class PepsiBottle implements Bottle {
+  @override
+  void open() {
+    print(super.toString());
+    print("Pepsi bottle is opened");
+  }
+}
+ 
+class CokeBottle implements Bottle {
+  @override
+  void open() {
+    print(super.toString());
+    print("Coke bottle is opened");
+  }
+}
+ 
 void main() {
-  Bottle bottle = CokeBottle();
-  bottle.open();
+  Bottle coke = Bottle('Fanta');
+  coke.open();
 }
